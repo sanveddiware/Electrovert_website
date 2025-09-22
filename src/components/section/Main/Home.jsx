@@ -45,7 +45,7 @@ const MainContent = () => {
           className="text-3xl sm:text-5xl md:text-7xl font-extrabold 
                      text-white drop-shadow-lg"
         >
-          Electrovert 2024-25
+          Electrovert 2025-26
         </h3>
 
         {/* Explore Button */}

@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../section/Footer/Footer';
 import Galaxy from '../UI/Galaxy';
 import Home from '../section/Main/Home';
+import EventRegistrationForm from '../section/Main/Register';
 
 function Layout() {
   return (
@@ -25,7 +26,9 @@ function Layout() {
       <main className="flex-1 relative z-10">
       <Outlet/>
       </main>
+      <EventRegistrationForm/>
       <Footer />
+      
     </div>
   );
 }
