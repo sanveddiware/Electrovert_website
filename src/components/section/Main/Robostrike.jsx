@@ -1,13 +1,24 @@
 import React from "react";
-import { Calendar, Users, IndianRupee, Phone } from "lucide-react";
+import { Calendar, Users, IndianRupee, Phone, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Robostrike = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="w-full max-w-lg bg-white/10 backdrop-blur-md text-white shadow-2xl rounded-2xl border border-purple-500/60 p-6 space-y-6">
+      <div className="w-full max-w-lg bg-white/10 backdrop-blur-md text-white shadow-2xl rounded-2xl border border-purple-500/60 p-6 space-y-6 relative">
+
+        {/* 🔙 Back Button */}
+        <button
+          onClick={() => navigate(-1)} // go back to previous/parent route
+          className="absolute top-4 left-4 flex items-center gap-2 text-purple-300 hover:text-purple-400 transition"
+        >
+          <ArrowLeft size={20} /> Back
+        </button>
 
         {/* Title */}
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-2 mt-6">
           <h1 className="text-2xl sm:text-2xl font-extrabold tracking-wide text-purple-300 drop-shadow-md">
             🤖⚡ ROBOSTRIKE 2025 🤖
           </h1>
@@ -61,19 +72,17 @@ const Robostrike = () => {
           </p>
         </div>
 
-        {/* Register Buttons */}
+        {/* Register Button */}
         <div className="flex justify-center gap-3 flex-wrap">
-         <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSc5y7p-JPYSXYjLHqhH42aA9xdmsVCBuDPD-wsNigX1GvM9Fw/viewform"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-5 py-2 sm:px-6 sm:py-3 bg-purple-600/80 hover:bg-purple-700/90 text-white font-bold rounded-full shadow-lg backdrop-blur-sm text-sm sm:text-base"
->
-  Register Here
-</a>
-
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc5y7p-JPYSXYjLHqhH42aA9xdmsVCBuDPD-wsNigX1GvM9Fw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 sm:px-6 sm:py-3 bg-purple-600/80 hover:bg-purple-700/90 text-white font-bold rounded-full shadow-lg backdrop-blur-sm text-sm sm:text-base"
+          >
+            Register Here
+          </a>
         </div>
-
       </div>
     </div>
   );
