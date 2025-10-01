@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
+import hundredrupees from '../../../assets/hundredrupees.jpg';
+import robopayment from '../../../assets/robostrike.jpg';
+import eightyrupees from '../../../assets/eightyrupees.jpg';
+import onetwenty from '../../../assets/onetwenty.jpg';
+import nintyrupees from '../../../assets/ninetyrupees.jpg'
 const EventRegistrationForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,15 +25,15 @@ const EventRegistrationForm = () => {
 
   // 🔹 QR codes for demo
   const qrCodes = {
-    astrosymposium: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=astrosymposium@upi",
-    auctionverse: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=auctionverse@upi",
-    circuitsupernova: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=circuitsupernova@upi",
-    codenebula: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=codenebula@upi",
-    enigma: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=enigma@upi",
-    gallaxyquest: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=gallaxyquest@upi",
-    interstellar: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=interstellar@upi",
-    starlance: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=starlance@upi",
-    robostrike: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=robostrike@upi",
+    astrosymposium: nintyrupees,
+    auctionverse: onetwenty,
+    circuitsupernova: eightyrupees,
+    codenebula: hundredrupees,
+    enigma: hundredrupees,
+    gallaxyquest: eightyrupees,
+    interstellar: eightyrupees,
+    starlance: hundredrupees,
+    robostrike: robopayment,
   };
 
   const handleChange = (e) => {
