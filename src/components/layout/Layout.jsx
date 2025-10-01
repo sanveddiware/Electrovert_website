@@ -26,8 +26,7 @@ function Layout() {
       <main className="flex-1 relative z-10">
       <Outlet/>
       </main>
-      <EventRegistrationForm/>
-      <Footer />
+      <Footer/>
       
     </div>
   );

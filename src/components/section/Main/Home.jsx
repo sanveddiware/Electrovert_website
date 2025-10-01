@@ -2,9 +2,11 @@ import React from "react";
 import walchandlogo from "../../../assets/walchandlogo.svg";
 import EventCards from "./EventCards";
 import { Link } from "react-scroll";
+import EventRegistrationForm from "./Register";
 
 const MainContent = () => {
   return (
+    <>
     <main className="flex-1 w-full px-4 sm:px-6 py-10 sm:py-16 text-center">
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto space-y-6">
@@ -47,6 +49,10 @@ const MainContent = () => {
         >
           Electrovert 2025-26
         </h3>
+        {/* When Event is happening */}
+         <p className="text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto font-bold">
+          11 & 12 October
+        </p>
 
         {/* Explore Button */}
         <div className="mt-6 sm:mt-8 flex justify-center">
@@ -67,9 +73,12 @@ const MainContent = () => {
 
       {/* Events Section */}
       <div id="events" className="mt-12 sm:mt-16">
-        <EventCards />
+        <EventCards/>
       </div>
+      
     </main>
+    <EventRegistrationForm/>
+    </>
   );
 };
 
