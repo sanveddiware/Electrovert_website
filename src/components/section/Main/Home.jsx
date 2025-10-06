@@ -3,7 +3,7 @@ import walchandlogo from "../../../assets/walchandlogo.svg";
 import EventCards from "./EventCards";
 import { Link } from "react-scroll";
 import EventRegistrationForm from "./Register";
-import LogoLoop from "../../UI/logoloop";
+import LogoLoop from "../../UI/logoloop.jsx";
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import sponsor1 from '../../../assets/Sponsors/sponsor1.jpg';
 import sponsor2 from '../../../assets/Sponsors/sponsor2.png';
