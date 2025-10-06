@@ -3,13 +3,29 @@ import walchandlogo from "../../../assets/walchandlogo.svg";
 import EventCards from "./EventCards";
 import { Link } from "react-scroll";
 import EventRegistrationForm from "./Register";
+import LogoLoop from "../../UI/logoloop";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import sponsor1 from '../../../assets/Sponsors/sponsor1.jpg';
+import sponsor2 from '../../../assets/Sponsors/sponsor2.png';
+import sponsor3 from '../../../assets/Sponsors/sponsor3.jpg';
+import sponsor4 from '../../../assets/Sponsors/sponsor4.jpg';
+import sponsor5 from '../../../assets/Sponsors/sponsor5.jpg'
+
+const techLogos = [
+  { src: sponsor1, title: "React" },
+  { src: sponsor2, title: "Next.js" },
+  { src: sponsor3, title: "TypeScript" },
+  { src: sponsor4, title: "Tailwind CSS" },
+  { src: sponsor5, title: "Tailwind CSS" },
+];
+
 
 const MainContent = () => {
   return (
     <>
     <main className="flex-1 w-full px-4 sm:px-6 py-10 sm:py-16 text-center">
       {/* Hero Section */}
-      <section className="max-w-4xl mx-auto space-y-6">
+      <section className=" mx-auto space-y-6">
         {/* College Name */}
         <h1
           className="flex flex-col md:flex-row items-center justify-center 
@@ -53,6 +69,31 @@ const MainContent = () => {
          <p className="text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto font-bold">
           11 & 12 October
         </p>
+<section className="mt-10">
+  <h2 className="text-2xl font-bold text-white mb-6">Our Sponsors</h2>
+</section>        
+
+<div style={{
+    width: '100%',          // ✅ makes it full width
+    height: '100px',
+    position: 'relative',
+    overflow: 'hidden',
+  }}>
+      <LogoLoop
+        logos={techLogos}
+        speed={120}
+        width='100%'
+        direction="left"
+        logoHeight={100}
+        gap={50}
+        pauseOnHover
+        scaleOnHover
+        fadeOut
+        fadeOutColor="#000000"
+        ariaLabel="Technology partners"
+      />
+    </div>
+
 
         {/* Explore Button */}
         <div className="mt-6 sm:mt-8 flex justify-center">
