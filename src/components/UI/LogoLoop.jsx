@@ -18,7 +18,7 @@ const useResizeObserver = (callback, elements, dependencies) => {
       callback();
       return () => window.removeEventListener('resize', handleResize);
     }
-
+     
     const observers = elements.map(ref => {
       if (!ref.current) return null;
       const observer = new ResizeObserver(callback);
